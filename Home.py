@@ -4,8 +4,7 @@ import numpy as np
 
 
 st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
+    page_title="Welcome!"
 )
 
 # Create a page header
@@ -24,6 +23,10 @@ with col1:
 with col2:
     st.image('images/df.png')
     st.write('<a href="/dataframe"> Dataframe</a>', unsafe_allow_html=True)
+
+with col3:
+    st.image('images/steam.png')
+    st.write('<a href="/steam"> Steam</a>', unsafe_allow_html=True)
 
 
 
