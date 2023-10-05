@@ -30,23 +30,23 @@ df = load_song_data(fp)
 col1, col2 = st.columns( [1,4] )
 
 with col1:
-    st.write('Temp')
+    #st.write('Temp')
     # create a list of all the state names
     genre_list = sorted(df['Genre'].unique())
     
     # create a mulit select button
-    selected_genres = st.multiselect(
-        'Select which genres to compare.',
-        genre_list
-        )
+    #selected_genres = st.multiselect(
+       # 'Select which genres to compare.',
+       # genre_list
+        #)
 
 
     # for debugging
     print(type(selected_genres), selected_genres)
 
 
-    # extract just the selected states
-    genre_df = df[df['Genre'].isin(selected_genres)].copy()
+    # extract just the selected genres
+    #genre_df = df[df['Genre'].isin(selected_genres)].copy()
 
 
 with col2:
@@ -64,26 +64,3 @@ with col2:
     x_ticks = np.arange(100000, 1500000, 100000)
     plt.xticks(x_ticks)
     st.pyplot(plt.gcf())
-
-
-
-
-    #genre_counts = df['Genre'].value_counts()
-    #genre_counts = genre_counts.reset_index()
-    #genre_counts.columns = ['Genre', 'Count']
-
-    #genre_matrix = df.pivot_table(index='Genre', columns='Name', values='Id', aggfunc='count')
-    #top_20 = genre_counts.head(20)
-    
-    #plt.figure(figsize=(12, 8))
-    #sns.heatmap(genre_matrix, cmap='coolwarm', annot=True, fmt='g')
-    #st.pyplot()
-
-    #plt.figure(figsize=(12, 12))
-    #x_ticks = np.arange(100, 1001, 100)
-    #plt.barh(top_20['Genre'], top_20['Count'])
-    #plt.xlabel('Count')
-    #plt.ylabel('Genre')
-    #plt.xticks(x_ticks)
-    #plt.gca().invert_yaxis() 
-    #st.pyplot(plt.gcf())
