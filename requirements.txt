@@ -8,3 +8,4 @@ pycaret
 seaborn
 nltk
 wordcloud
+streamlit-elements==0.1.*
