@@ -12,7 +12,7 @@ st.header("Group 6")
 
 
 # Create three columns 
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3, col4 = st.columns([1,1,1,1])
 
 
 # inside of the first column
@@ -28,7 +28,7 @@ with col3:
     st.image('images/steam.png')
     st.write('<a href="/steam"> Steam</a>', unsafe_allow_html=True)
 
-
-
-
+with col4:
+    st.image('images/steamplayersss.png')
+    st.write('<a href="/steamplayers"> SteamPlayers</a>', unsafe_allow_html=True)
 
